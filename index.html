@@ -9,7 +9,7 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <form id="book-form" action="#" method="get">
+    <form id="book-form" action="#" method="get" onsubmit="return false">
         <legend>Add a book!</legend>
         <fieldset>
             <label for="title">TITLE</label>
@@ -19,7 +19,7 @@
             <label for="pages">NUMBER OF PAGES</label>
             <input type="number" id="pages" name="pages" autocomplete="off" required>
             <label for="read">HAVE YOU READ IT?</label>
-            <select name="read">
+            <select id = "read" name="read">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
