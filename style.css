@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 260px minmax(800px, 3fr) 1fr;
+    background-color: rgb(241, 233, 241);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.card-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}  
+
+.card {
+    display: grid;
+    grid-template-rows: auto;
+    border-left: solid 10px rgb(141, 12, 38);
+    color: darkslategray;
+    background-color: rgb(255, 248, 255);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
