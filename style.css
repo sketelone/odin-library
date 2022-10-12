@@ -5,21 +5,33 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template: 30vh 60vh 20vh / 1fr 4fr 1fr;
     background-color: rgb(241, 233, 241);
     font-family:Arial, Helvetica, sans-serif;
     justify-items: center;
+    position: relative;
 }
 
 .header, .footer {
+    margin: 10px 0px;
     padding:30px;
     grid-column: 1 / 4;
 }
 
 .header {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    justify-items: center;
     font-family: 'Mr Bedfort', cursive;
     font-size: 60px;
     font-weight: bolder;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 200px;
+    z-index: 9;
 }
 
 form {
@@ -122,16 +134,16 @@ button {
     border-radius: 6px;
     color: white;
     letter-spacing: 0.2em;
+    height:40px;
+    padding:10px 40px;
 }
 
-#submit {
-    grid-column: 2 / 3;
+#submit, #close-form {
     justify-self: center;
     align-self: center;
-    margin: 60px;
-    padding:10px 40px;
-    height:40px;
     font-size: 16px;
+    width: 200px;
+    margin: 40px;
 }
 
 .read-button, .remove-button {
@@ -140,6 +152,7 @@ button {
     align-self: center;
     justify-self: center;
     height: 20px;
+    padding: 0px;
     width: 80px;
     font-size: 12px;
     font-weight: bold;
