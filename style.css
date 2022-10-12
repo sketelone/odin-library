@@ -87,16 +87,22 @@ select {
 
 .card {
     display: grid;
+    grid-template-rows: 3fr 1fr;
     background-color: rgb(250, 247, 243);
     background-image: linear-gradient(pink, pink), linear-gradient(palevioletred, palevioletred);
     background-size: 100% 2px, 2px 100%;
     background-position: 0 15%, 10% 0;
     background-repeat: no-repeat;
-    padding: 40px;
+    padding: 40px 10px 10px 40px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
     min-width: 200px;
     aspect-ratio: 2 / 1;
     font-family: "Courier Prime", monospace;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .footer {
@@ -111,16 +117,33 @@ select {
 }
 
 button {
-    background-color: #6f9e7b;
-    height:40px;
-    margin: 60px;
-    padding:10px 40px;
+    background-color: #6f9e7b; 
     border: none;
     border-radius: 6px;
     color: white;
-    font-size: 16px;
     letter-spacing: 0.2em;
+}
+
+#submit {
     grid-column: 2 / 3;
     justify-self: center;
     align-self: center;
+    margin: 60px;
+    padding:10px 40px;
+    height:40px;
+    font-size: 16px;
+}
+
+.read-button, .remove-button {
+    background: rgb(250, 247, 243);
+    border: solid palevioletred 2px;
+    align-self: center;
+    justify-self: center;
+    height: 20px;
+    width: 80px;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    justify-self: start;
+    align-self: end;
 }
