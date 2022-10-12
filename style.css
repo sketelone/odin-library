@@ -5,7 +5,8 @@
 
 body {
     display: grid;
-    grid-template: 30vh 60vh 20vh / 1fr 4fr 1fr;
+    gap: 20px;
+    grid-template: 30vh minmax(55vh, auto) 15vh / 1fr 4fr 1fr;
     background-color: rgb(241, 233, 241);
     font-family:Arial, Helvetica, sans-serif;
     justify-items: center;
@@ -20,7 +21,8 @@ body {
 
 .header {
     display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
+    min-width: 600px;
+    grid-template: 2fr 1fr 1fr;
     justify-items: center;
     font-family: 'Mr Bedfort', cursive;
     font-size: 60px;
@@ -39,7 +41,6 @@ form {
     padding:30px;
     background-color:  #f7fff9;
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-    /* width: 75%; */
 }
 
 legend {
@@ -74,12 +75,6 @@ input {
     width:225px;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
 .card-container {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -89,20 +84,27 @@ input::-webkit-inner-spin-button {
 
 .card {
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template: 30px 3fr 1fr / 30px 1fr;
+    padding: 10px;
     background-color: rgb(250, 247, 243);
     background-image: linear-gradient(pink, pink), linear-gradient(palevioletred, palevioletred);
     background-size: 100% 2px, 2px 100%;
     background-position: 0 15%, 10% 0;
     background-repeat: no-repeat;
-    padding: 40px 10px 10px 40px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-    min-width: 200px;
+    min-width: 250px;
     aspect-ratio: 2 / 1;
     font-family: "Courier Prime", monospace;
 }
 
+.card text {
+    grid-area: 2 / 2 / 3 / 3;
+
+}
+
 .button-container {
+    padding: 30px 30px 10px 30px;
+    grid-area: 3 / 1 / 4 / 3;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -133,7 +135,7 @@ button {
 }
 
 .read-button, .remove-button {
-    justify-self: start;
+    justify-self: center;
     align-self: end;
     background: rgb(250, 247, 243);
     border: solid palevioletred 2px;
@@ -162,6 +164,7 @@ button:hover {
 
 span {
     display:block;
+    text-align: center;
     width:225px;
     font-size: 10px;
     letter-spacing: 0.2em;
@@ -169,5 +172,5 @@ span {
     border: none;
     text-transform: uppercase;
     overflow-wrap: break-word;
-    margin-top: -20px;
+    margin-top: -40px;
 }
