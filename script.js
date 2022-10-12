@@ -47,7 +47,7 @@ document.addEventListener('click', function(e) {
 
 //read info from form, construct a new book and add it to the library
 function addBookToLibrary(title, author, pages, read) {
-    if (read.value == "yes") {
+    if (read.checked) {
         var newBook = new Book(title.value, author.value, pages.value, "already read");
     } else {
         var newBook = new Book(title.value, author.value, pages.value, "not read yet");
